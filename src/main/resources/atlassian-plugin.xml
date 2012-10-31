@@ -1,0 +1,25 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+    </plugin-info>
+    <webwork1 key="test" name="test" class="java.lang.Object">
+        <actions>
+            <action name="ru.megaplan.jira.plugins.history.search.HistorySearchTestAction" alias="HistorySearchTestAction">
+                <view name="success">/templates/success.vm</view>
+                <view name="error">/templates/error.vm</view>
+            </action>
+        </actions>
+    </webwork1>
+    <component key="historySearchManager" name="History search manager"
+               class="ru.megaplan.jira.plugins.history.search.HistorySearchManagerImpl"
+            public="true">
+        <interface>ru.megaplan.jira.plugins.history.search.HistorySearchManager</interface>
+    </component>
+    <component key="historySearchRequest" name="History search request"
+               class="ru.megaplan.jira.plugins.history.search.HistorySearchRequestImpl"
+            public="true">
+        <interface>ru.megaplan.jira.plugins.history.search.HistorySearchRequest</interface>
+    </component>
+</atlassian-plugin>

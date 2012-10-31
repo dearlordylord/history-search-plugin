@@ -1,0 +1,5 @@
+#if ($errorMessages)
+    #foreach($errorMessage in $errorMessages)
+        <p>$errorMessage</p>
+    #end
+#end

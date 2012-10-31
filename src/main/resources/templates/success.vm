@@ -1,0 +1,18 @@
+#if ($changeHistoryItems)
+    #foreach ($changeHistoryItem in $changeHistoryItems)
+        <p>$changeHistoryItem.created</p>
+    #end
+#end
+<form action="HistorySearchTestAction.jspa">
+<p> issue key : </p>
+<input name="issueKey"></input>
+<p> what : </p>
+<input name="what"></input>
+<p> who : </p>
+<input name="who"></input>
+<p> from : </p>
+<input name="from"></input>
+<p> to : </p>
+<input name="to"></input>
+<input type="submit" name="submit"></input>
+</form>
